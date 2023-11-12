@@ -12,6 +12,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
 	@Query(nativeQuery = true, value = "SELECT c.name "
 			+ "FROM customers c "
-			+ "WHERE state= :state")
+			+ "WHERE UPPER(state) = UPPER(:state)")
 	List<CustomerMinProjection> search1(String state);
 }
