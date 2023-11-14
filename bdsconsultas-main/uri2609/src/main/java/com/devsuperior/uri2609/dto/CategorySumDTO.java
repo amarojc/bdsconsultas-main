@@ -38,6 +38,9 @@ public class CategorySumDTO {
 
 	@Override
 	public String toString() {
-		return "CategorySumDTO [name=" + name + ", sum=" + sum + "]";
+		StringBuilder sb = new StringBuilder();
+		sb.append("Name: [ " + name + " ] ");
+		sb.append("Sum: [ " + sum + " ]");
+		return sb.toString();
 	}
 }
